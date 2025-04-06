@@ -23,4 +23,4 @@ jobs:
     - name: Tag images
       run: docker tag  my-image-name:${{github.run_number}} {{secrets.REGISTRY_USERNAME}}/my-image-name:${{github.run_number}}
     - name: Push to registry
-      run: docker push 
+      run: docker push {{secrets.REGISTRY_USERNAME}}/my-image-name:${{github.run_number}}
