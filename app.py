@@ -40,13 +40,13 @@ def download_pdf():
 
     # Updated resume content for PDF
 
-    story.append(Paragraph("John Doe", styles['Title']))
+    story.append(Paragraph("Emile Kenmoe", styles['Title']))
 
     story.append(Paragraph("DevOps Engineer", styles['Heading2']))
 
-    story.append(Paragraph("john.doe@example.com", styles['Normal']))
+    story.append(Paragraph("emilekenmoe@gmail.com", styles['Normal']))
 
-    story.append(Paragraph("Total Experience: 8+ Years", styles['Normal']))
+    story.append(Paragraph("Total Experience: 7+ Years", styles['Normal']))
 
     story.append(Spacer(1, 12))
 
@@ -54,7 +54,7 @@ def download_pdf():
 
     story.append(Paragraph("Professional Summary", styles['Heading2']))
 
-    story.append(Paragraph("Experienced DevOps Engineer with over 8 years in automating, optimizing, and managing cloud infrastructure. Proficient in Docker, Kubernetes, AWS, Terraform, and bash scripting, with a proven track record of implementing CI/CD pipelines and container orchestration. Skilled in Linux server administration and infrastructure as code, delivering scalable and secure solutions.", styles['Normal']))
+    story.append(Paragraph("Experienced DevOps Engineer with over 7 years in automating, optimizing, and managing cloud infrastructure. Proficient in Docker, Kubernetes, AWS, Terraform, and bash scripting, with a proven track record of implementing CI/CD pipelines and container orchestration. Skilled in Linux server administration and infrastructure as code, delivering scalable and secure solutions.", styles['Normal']))
 
     story.append(Spacer(1, 12))
 
@@ -62,9 +62,11 @@ def download_pdf():
 
     story.append(Paragraph("Education", styles['Heading2']))
 
-    story.append(Paragraph("B.S. in Computer Science - University of Tech City (2011-2015)", styles['Normal']))
+    story.append(Paragraph("B.S. Science - University of Texas Health (2016-2018)", styles['Normal']))
 
-    story.append(Paragraph("Certified Kubernetes Administrator (CKA) - Linux Foundation (2019)", styles['Normal']))
+    story.append(Paragraph("Certified Kubernetes Administrator (CKA) - Linux Foundation (2022)", styles['Normal']))
+    
+    story.append(Paragraph("AWS Certified Solutions Architect - Amazon Web Services (2020)", styles['Normal']))
 
     story.append(Paragraph("AWS Certified Solutions Architect - Amazon Web Services (2020)", styles['Normal']))
 
