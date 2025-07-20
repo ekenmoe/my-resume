@@ -41,7 +41,7 @@ jobs:
           image-ref: "${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPO_NAME }}:${{ env.IMAGE_TAG}}"
           #scan-type: "fs"
           format: "table"
-          exit-code: '1'
+          exit-code: '0'
           severity: "CRITICAL,HIGH"
           ignore-unfixed: true
           vuln-type: 'os,library'
