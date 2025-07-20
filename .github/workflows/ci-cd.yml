@@ -32,10 +32,21 @@ jobs:
         id: ecr-login
 
       - name: build tag and push image
-        id: build-and-push
+        id: build
         run: |
             docker build -t ${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPO_NAME }}:${{ env.IMAGE_TAG}} .
+      - name: Scan image with Trivy
+        uses: aquasecurity/trivy-action@v0.16.2
+        with:
+          image-ref: "${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPO_NAME }}:${{ env.IMAGE_TAG}}"
+          #scan-type: "fs"
+          format: "table"
+          exit-code: '1'
+          severity: "CRITICAL,HIGH"
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+      
+      - name: build tag and push image
+        id: push
+        run: |
             docker push ${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPO_NAME }}:${{ env.IMAGE_TAG}}
-            
-      
-      
