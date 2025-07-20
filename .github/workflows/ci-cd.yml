@@ -83,6 +83,6 @@ jobs:
             cluster: nginx-cluster
             service: nginx-service
             image: ${{ needs.build.outputs.image }}
-            task-definition: nginx-task
+            task-definition: nginx
 
 
