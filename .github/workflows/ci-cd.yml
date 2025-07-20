@@ -83,6 +83,7 @@ jobs:
             cluster: nginx-cluster
             service: nginx-service
             image: ${{ needs.build.outputs.image }}
-            task-definition: nginx
+            task-definition: nginx-task
+            wait-for-service-stability: true
 
 
